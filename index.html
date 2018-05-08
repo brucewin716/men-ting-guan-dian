@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<title>门庭管店</title>
+	<link rel="stylesheet"  type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet"  type='text/css' href="css/bootstrapValidator.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700|Merriweather:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet"  type="text/css" href="css/default.css">
+	<link rel="stylesheet"  type="text/css" href="css/style.css">
+	<link rel="stylesheet"  type="text/css" href="css/toastr.min.css">
+	<link rel="stylesheet" type="text/css"  href="css/index.css">
+	 <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class='navigation-is-open'>
+	<div class="wrap">
+		<div class="les left">
+			<img src="image/logo.png" alt="" class='img-responsive'>
+			<ul class="list-group">
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-home"></span>首页</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-edit"></span>前台</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-user"></span>会员</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-folder-close"></span>产品</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-yen"></span>营销</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-calendar"></span>统计</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-th"></span>应用</a></li>
+				<li class="list-group-item"><a href="javascript:;"><span class="glyphicon glyphicon-cog"></span>设置</a></li>
+			</ul>
+		</div>
+		<div class='lesr left' style="width:100%">
+			<div class="mid left">
+			<div class="search">
+				<span class="glyphicon glyphicon-search"></span>
+				<input type="search" name="search" placeholder="搜索产品或顾客姓名/手机号">	
+			</div>
+			<div class="banner">
+				<ul>
+					<li class="active"><a href="">划卡</a></li>
+					<li><a href="">全部</a></li>
+					<li><a href="">日用护肤</a></li>
+					<li><a href="">减肥</a></li>
+					<li><a href="">瘦腰</a></li>
+					<li><a href="">日用护肤</a></li>
+					<li><a href="">身体养生</a></li>
+					<li><a href="">眉部</a></li>
+					<li><a href="">美白</a></li>
+					<li><a href="">护肤</a></li>
+					<li><a href="">减肥</a></li>
+					<li><a href="">爱茉莉</a></li>
+					<li><a href="">美容类</a></li>
+					<li><a href="">美发</a></li>
+					<li><a href="">美体</a></li>
+					<li><a href="">美容类</a></li>				
+				</ul>
+				<div class="icon">
+					<div class='icon_mark'>┇&nbsp;&nbsp;&nbsp;v</div>
+					<div class="showMore">
+							<ul class="itemList"></ul>
+					</div>
+				</div>
+			</div>
+			<div class="imgList">
+				
+			</div>	
+		</div>
+			<div class="ris left">
+				<div class="ris_top">
+					<div class="ris_top_l" data-toggle="modal" data-target="#myModal">
+						<img src="image/user.png" alt="" class='user'>
+						创建新会员
+					</div>
+					<div class="ris_top_r">
+						<ul>
+							<li class='left'><p><span class='glyphicon glyphicon-ok sk'></span></p>散客女</li>
+							<li class='left'><p><span class='glyphicon glyphicon-ok sk'></span></p>散客男</li>
+						</ul>
+					</div>
+				</div>
+				<div class='comsumer'>消费项目</div>
+				<div class="comsumer_container">
+					<div class="ris_middle">
+					
+					</div>
+					<div class="comsumer_item" id="goods_tpl" style="display: none">
+						<div class="comsumer_product">
+							<ul id='comsumer_detail'>
+								<li>
+									<div class="item_title table-responsive">
+										<table class='table' id='item_title'>
+											<tr>
+												<th class='name' colspan="2">#goods_name#</th>
+												<th class='count'>×<span class='number'>#goods_count#</span></th>
+												<th class='Jiage'>#goods_price#</th>
+												<th class="btn_delete"><span class='glyphicon glyphicon-trash delete' goods_id="#goods_id#"></span></th>
+											</tr>
+										</table>
+									</div>
+									<div class="item_detail table-responsive">
+										<table class='table'>
+											<tr>
+												<td>
+													数量<br>
+													<input type="text"  name='count' value="#goods_count#">
+												</td>
+												<td colspan='2'>
+													价格<br>
+													<input type="text" name='price' value="#goods_price#">
+												</td>
+												<td colspan='2'>
+													折扣(%)<br>
+													<input type="text"  name=' discount' value="100">
+												</td>
+											</tr>
+											<!-- <tr>
+												<td colspan="5" id='chaw'>选择服务人员</td>
+											</tr> -->
+										</table>		
+									</div>
+								</li>
+							</ul>
+							<div id="mark">
+								<textarea name="sale_mark" id="sale_mark" placeholder="请输入销售备注"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="ris_bottom">
+						<div class="ris_bottom_t">
+							<span class='price_s'>总价</span>
+							<span class="total_price right"></span>
+						</div>
+						<div id="discount">
+							<span class='price_s'>折扣</span>
+							<span id='disc' class='right' style="margin-right:10px;">￥-0.00></span>
+						</div>
+						<div class="ris_bottom_b">
+							<a href="#cd-nav" class="cd-nav-trigger">
+								<button class='btn btn_rec'>收款<span class="rec"></span></button>
+							</a>
+							<input type="button" class='btn btn_ord' value='挂单' data-toggle="modal" data-target="#myModal_hang">
+							<input type="button" class='btn btn_fet' value='取单' data-toggle="modal" data-target="#myModal_fetch">
+						</div>
+					</div>
+				</div>			
+			</div>
+		</div>	
+	</div>
+	<!-- 点击收款出现推拉门 -->
+	<div id="door">
+		<main id="main">
+			<header class="htmleaf-header">
+				<div class="check_detail left">
+					<div class="switch">
+						<img src="image/return.jpg" alt="返回小图标">返回	
+					</div>
+					<div class="guest">
+						<img src="image/user.png" alt="" class='user'>
+						散客
+					</div>
+					<div class="consume_container">
+						<div class='comsumer'>消费项目</div>
+						<ul id='comsumer_detail' style="padding-left:0px;margin:0px;">
+							<li>
+								<div class="item_title table-responsive">
+									<table class='table' id='item_title_l'></table>
+								</div>
+							</li>
+						</ul>
+						<div class="calc">
+							<div class="ris_bottom_t">
+								<span class='price_s'>总价</span>
+								<span id="total_price_o" class='right total_price'></span>
+							</div>
+							<div class="ris_bottom_t">
+								<span class='price_s'>折扣</span>
+								<span id="discount_o" class='right'>￥0.00</span>
+							</div>
+							<div class="ris_bottom_t">
+								<span class='price_s'>应收</span>
+								<span id="receipt_o" class='right rec'></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="check_out left">
+					<div id="check">结账</div>
+					<div id="received">实收 <input type="text" name="receiveNum" id='receiveNum' class="total_num"></div>
+					<div id="payment">
+						<div class="paytext left">支付方式</div>
+						<div class="pay_container left">
+							<div class="payway cash">现金<img src="image/checked.png" alt=""></div>
+							<div class="payway alipay">支付宝<img src="image/checked.png" alt=""></div>
+							<div class="payway group">团购<img src="image/checked.png" alt=""></div>
+							<div class="payway wechat">微信<img src="image/checked.png" alt=""></div>
+						</div>						
+					</div>
+					<div id="gathering" class="hide">	
+						<div class="sum left">支付金额 </div>
+						<div class="sum_detail left">
+							<label for="total_num"></label>
+							<input type="text" name="total_num" class="total_num">
+						</div>
+					</div>
+					<div class="btn_sk">
+						<button class="btn btn-primary" data-toggle="modal" data-target="#myModal_rec">收款</button>
+					</div>
+				</div>
+				
+			</header>
+		</main>
+		<div id="cd-nav" class="cd-nav">
+			<div class="cd-navigation-wrapper">
+			
+			</div> <!--  .cd-navigation-wrapper -->
+		</div> <!-- .cd-nav -->
+	</div>
+
+	<!-- 创建会员的模态框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">创建新会员</h4>
+	            </div>
+	            <form action="target.php" method="post" id="aa">
+	            	<div class="modal-body">
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="userName" class="control-label">姓名</label>
+							    <input type="text" class="form-control" id="userName" name='userName' placeholder="请输入会员姓名">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="mobile" class="control-label">手机号</label>
+							    <input type="tel" class="form-control" id="mobile" name='mobile' placeholder="请输入会员手机号">
+							</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="cardNum" class="control-label">卡号</label>
+							    <input type="text" class="form-control" id="cardNum" name='cardNum'placeholder="请输入会员卡号">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="grade" class="control-label">等级</label>
+								<div class='grade'>
+									<select name="grade" id='grade'>
+								    	<option value="">普通会员</option>
+								    	<option value="">黄金会员</option>
+								    	<option value="">白金会员</option>
+								    	<option value="">铂金会员</option>
+								    	<option value="">钻石会员</option>
+								    	<option value="">金卡会员</option>
+								    	<option value="">高级会员</option>
+							    	</select>
+								</div>
+							    
+							</div>
+	            		</div>
+	            		<div class="row">		
+							<div class="form-group col-md-6 col-sm-12">
+								<label for="source" class="control-label">来源</label>
+								<div class='source'>
+									<select name="source" id='source'>
+								    	<option value="">导入</option>
+								    	<option value="">店内</option>
+								    	<option value="">线上</option>
+								    	<option value="">微信推广</option>
+								    	<option value="">百度推广</option>
+								    	<option value="">老客户介绍</option>
+								    	<option value="">参加沙龙</option>
+							    	</select>
+								</div>
+							</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    
+						  	</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group  col-sm-12"> 会员基本信息</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label>性别</label>
+							    <div >
+							    	<label class="radio-inline control-label">
+										<input type="radio" name="sex"  value="male">男
+									</label>
+									<label class="radio-inline control-label">
+										<input type="radio" name="sex"  value="female">女
+									</label>
+									<label class="radio-inline control-label">
+									    <input type="radio" name="sex"  value="other">未知
+									</label>
+							    </div>
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="birth" class="control-label">生日</label>
+							    <input type="date" class="form-control" id="birth" name='birth' placeholder="请选择会员生日">
+							</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="nickName" class="control-label">昵称</label>
+							    <input type="text" class="form-control" id="nickName" name='nickName' placeholder="请输入昵称">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="stature" class="control-label">身高</label>
+							    <input type="text" class="form-control" id="stature" name='stature' 
+							    placeholder="请输入身高(cm)">
+							</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="weight" class="control-label">体重</label>
+							    <input type="text" class="form-control" id="weight" name='weight'placeholder="请输入体重">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							     <label>婚姻</label>
+							    <div >
+							    	<label class="radio-inline control-label" >
+										<input type="radio" name="marry"  value="spinsterhood">未婚
+									</label>
+									<label class="radio-inline control-label">
+										<input type="radio" name="marry"  value="married">已婚
+									</label>
+							    </div>
+							</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="job" class="control-label">职业</label>
+							    <input type="text" class="form-control" id="job" name='job' placeholder="请输入职业">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="hobby" class="control-label">个人爱好</label>
+							    <input type="text" class="form-control" id="hobby" name='hobby' placeholder="请输入个人爱好">
+							</div>
+	            		</div>
+	            		<div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="address" class="control-label">联系地址</label>
+							    <input type="text" class="form-control" id="address" name='address' placeholder="请输入联系地址">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="company" class="control-label">工作单位</label>
+							    <input type="text" class="form-control" id="company" name='company' placeholder="请输入工作单位">
+							</div>
+	            		</div>
+	            		 <div class="row">
+	            			<div class="form-group col-md-6 col-sm-12">
+							    <label for="change" class="control-label">最想改善</label>
+							    <input type="text" class="form-control" id="change" name='change' placeholder="请输入最想改善">
+						  	</div>
+							<div class="form-group col-md-6 col-sm-12">
+							    <label for="urgency " class="control-label">紧急事项</label>
+							    <input type="text" class="form-control" id="urgency " name='urgency ' placeholder="请输入紧急事项">
+							</div>
+	            		</div>
+		            </div>
+		            <div class="modal-footer">
+		                <input type="submit" class="btn btn-danger"  value="创建会员"/>
+		            </div>
+	            </form>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+	<!-- 收款模态框 -->
+	<div class="modal fade" id="myModal_rec" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">交易结果</h4>
+	            </div>
+	            	<div class="modal-body">
+	            		<img src="image/cat.png" alt="">
+	            		<div class="reminder">交易成功</div>
+	            		<div class="deal_log">请于交易流水中查看</div>
+		            </div>
+		            <div class="modal-footer">
+		                <input type="button" class="btn btn-success" id="btn_ret" data-dismiss="modal" value="返回开单"/>
+		               <!--  <input type="button" class="btn btn-success" id="btn_res" value="预约下次到店"/> -->
+		            </div>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+
+	<!-- 挂单模态框 -->
+	<div class="modal fade" id="myModal_hang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel" style="font-size:2rem;">挂单</h4>
+	            </div>
+	            	<div class="modal-body">
+	            		<p>名称</p>
+	            		<div class="ord_hang">
+	            			<input type="text" name="handup" id="handup" placeholder="请输入挂单名称例如'001'" style="width:50%;height:40px;border-radius:5px;outline:none!important;border:1px solid #E5E5E5;text-indent:10px;">
+	            			<input type="button" name="btn_hand" class="btn" id="btn_hand"value="挂单" style="padding:9px 12px;width:16%;outline:none;background:#35B7A5">
+	            		</div>
+		            </div>
+		            <div class="modal-footer">
+		               <p>挂单名称</p>
+		               <div class="room">
+		               	<input type="button" class="btn" disabled="disabled" value="百合厅">
+		               	<input type="button" class="btn" value="玫瑰厅">
+		               	<input type="button" class="btn" disabled="disabled" value="牡丹厅">
+		               	<input type="button" class="btn" value="光电室">
+		               	<input type="button" class="btn" disabled="disabled" value="造型室">
+		               	<input type="button" class="btn" value="养生室">
+		               	<input type="button" class="btn" disabled="disabled" value="美甲室">
+		               	<input type="button" class="btn" value="足浴室">
+		               	<input type="button" class="btn" disabled="disabled" value="按摩室">
+		               	<input type="button" class="btn" value="纹绣室">
+		               </div>
+		            </div>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+	
+	<!-- 取单模态框 -->
+	<div class="modal fade" id="myModal_fetch" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h4 class="modal-title" id="myModalLabel">取单</h4>
+	            </div>
+            	<div class="modal-body" style="padding-top:0px;">
+            		<div class="order_container">
+            			<!-- <div class="order_detail">
+            				<p><span class="place">fjdfjdfjdkf</span><span class="glyphicon glyphicon-trash delete right"></span></p>
+            				<ul>
+            					<li>顾客:散客或者会员</li>
+            					<li class="goods_name">项目:goods_name</li>
+            					<li>备注:xxx</li>
+            				</ul>
+            			</div> -->
+            		</div>
+	            </div>
+	        </div><!-- /.modal-content -->
+	    </div><!-- /.modal -->
+	</div>
+
+	<!-- 取单模态框中删除按钮弹出的模态框 -->
+	<div id="notice_box">
+        <div class="notice_box_h">
+            <button type="button" class="close" >&times;</button>
+            <h4 class="md-title" id="mml">温馨提醒</h4>
+        </div>
+    	<div class="notice_box_b" style="padding-top:0px;">
+    		<div class="notice">
+    			挂单删除后不可恢复，请确认是否删除？
+    		</div>
+        </div>
+        <div class="notice_box_f">
+            <input type="button" class="btn btn-success btn_confirm"  value="确认"/>
+            <input type="button" class="btn btn-default "  value="取消"/>
+        </div>
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/toastr.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<!-- toastr -->
+</body>
+</html>
